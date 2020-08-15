@@ -42,13 +42,14 @@ fi
 ERRORS_BUFFER=""
 # 需要检查的php程序目录
 php_dirs=(
-  tests/
-  src/
-  bin/
-  ../linux/
-  ../../methodology/DesignPattern
+  tests/unittest
   ../php
+  ../../methodology/DesignPattern
   ../learn-leetcode/php
+  ../../basic/OperatingSystem
+  ../../basic/Algorithm
+  ../../basic/DataStructrue
+  ../../practice/keep-arts
 )
 
 cd $root
