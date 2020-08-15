@@ -2,10 +2,8 @@
 
 namespace DesignPattern\NullObject;
 
-class RealCustomer
+class RealCustomer extends AbstractCustomer
 {
-    private $name;
-
     public function __construct($name)
     {
         $this->name = $name;

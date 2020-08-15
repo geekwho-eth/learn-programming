@@ -2,9 +2,9 @@
 
 namespace DesignPattern\NullObject;
 
-class AbstractCustomer
+abstract class AbstractCustomer
 {
     protected $name;
-    public abstract isNil();
-    public abstract getName();
+    abstract public function isNil();
+    abstract public function getName();
 }
