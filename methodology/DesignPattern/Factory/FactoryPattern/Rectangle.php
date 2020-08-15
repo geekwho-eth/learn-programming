@@ -3,7 +3,8 @@ namespace DesignPattern\Factory\FactoryPattern;
 
 class Rectangle implements IShape
 {
-    public function draw(){
+    public function draw()
+    {
         echo "Inside Rectangle::draw() method.";
     }
 }

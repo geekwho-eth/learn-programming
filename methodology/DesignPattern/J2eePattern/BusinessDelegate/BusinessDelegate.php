@@ -12,7 +12,8 @@ class BusinessDelegate
     {
         $this->lookupService = new BusinessLookUp();
     }
-    public function setServiceType($serviceType){
+    public function setServiceType($serviceType)
+    {
         $this->serviceType = $serviceType;
     }
 

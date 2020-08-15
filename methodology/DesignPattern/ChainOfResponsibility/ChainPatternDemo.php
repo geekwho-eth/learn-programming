@@ -8,8 +8,8 @@ class ChainPatternDemo
 
     public function getChainOfLoggers()
     {
-        $errorLogger = new ErrorLogger(AbstractLogger::ERROR);
-        $fileLogger = new FileLogger(AbstractLogger::DEBUG);
+        $errorLogger   = new ErrorLogger(AbstractLogger::ERROR);
+        $fileLogger    = new FileLogger(AbstractLogger::DEBUG);
         $consoleLogger = new ConsoleLogger(AbstractLogger::INFO);
         $errorLogger->setNextLogger($fileLogger);
         $fileLogger->setNextLogger($consoleLogger);

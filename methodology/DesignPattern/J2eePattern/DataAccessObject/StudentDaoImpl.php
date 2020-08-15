@@ -8,8 +8,8 @@ class StudentDaoImpl implements IStudentDao
 
     public function __construct()
     {
-        $student1 = new Student("Robert",0);
-        $student2 = new Student("John",1);
+        $student1                               = new Student("Robert", 0);
+        $student2                               = new Student("John", 1);
         $this->students[$student1->getRollNo()] = $student1;
         $this->students[$student2->getRollNo()] = $student2;
     }

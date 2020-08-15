@@ -28,7 +28,8 @@ class Circle implements IShape
         $this->radius = $radius;
     }
 
-    public function draw(){
+    public function draw()
+    {
         echo "Inside Circle::draw() method. color {$this->color} x {$this->x} y {$this->y} radius {$this->radius} ";
     }
 }

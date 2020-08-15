@@ -4,13 +4,15 @@ namespace DesignPattern\Memento;
 
 class CareTaker
 {
-   private $mementoList = [];
+    private $mementoList = [];
 
-   public function add($state){
-      $this->mementoList[] = ($state);
-   }
+    public function add($state)
+    {
+        $this->mementoList[] = ($state);
+    }
 
-   public function get($index){
-      return $this->mementoList[$index];
-   }
+    public function get($index)
+    {
+        return $this->mementoList[$index];
+    }
 }

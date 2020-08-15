@@ -4,7 +4,8 @@ namespace DesignPattern\AbstractFactory\AbstractFactoryPattern;
 
 class FactoryProducer
 {
-    public static function getFactory($factoryType){
+    public static function getFactory($factoryType)
+    {
         if (!$factoryType || !in_array($factoryType, ['ColorFactory', 'ShapeFactory'])) {
             return null;
         }

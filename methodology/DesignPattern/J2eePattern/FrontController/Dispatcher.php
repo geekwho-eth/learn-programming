@@ -10,7 +10,7 @@ class Dispatcher
     public function __construct()
     {
         $this->studentView = new StudentView();
-        $this->homeView = new HomeView();
+        $this->homeView    = new HomeView();
     }
 
     public function dispatch($request)

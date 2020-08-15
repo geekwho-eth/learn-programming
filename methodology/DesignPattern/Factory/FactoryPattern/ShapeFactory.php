@@ -3,7 +3,8 @@ namespace DesignPattern\Factory\FactoryPattern;
 
 class ShapeFactory
 {
-    public function getShape($shapeType){
+    public function getShape($shapeType)
+    {
         if (!$shapeType) {
             return null;
         }

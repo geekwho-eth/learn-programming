@@ -9,7 +9,8 @@ if (!class_exists('Thread')) {
  * @author GeekWho <geekwho@xbc.me>
  * @since 2020.07.28
  */
-class WorkerThread extends \Thread {
+class WorkerThread extends \Thread
+{
     public function run()
     {
         return ThreadSafeSingleton::getInstanceByLock();

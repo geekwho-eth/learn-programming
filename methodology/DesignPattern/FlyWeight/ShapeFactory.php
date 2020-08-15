@@ -12,7 +12,7 @@ class ShapeFactory
     {
         $circle = $this->circleMap[$color] ?? null;
         if ($circle === null) {
-            $circle = new Circle($color);
+            $circle                  = new Circle($color);
             $this->circleMap[$color] = $circle;
         }
         return $circle;

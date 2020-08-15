@@ -7,7 +7,8 @@ class FilterChain
     private $filters = [];
     private $target;
 
-    public function addFilter($filter){
+    public function addFilter($filter)
+    {
         $this->filters[] = $filter;
     }
 

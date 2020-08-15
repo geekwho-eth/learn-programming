@@ -8,9 +8,8 @@ class CustomerFactory
 
     public static function getCustomer($name)
     {
-        for($i = 0; $i < count(self::$names); $i++)
-        {
-            if (self::$names[$i] == $name){
+        for ($i = 0; $i < count(self::$names); $i++) {
+            if (self::$names[$i] == $name) {
                 return new RealCustomer($name);
             }
             return new NullCustomer();

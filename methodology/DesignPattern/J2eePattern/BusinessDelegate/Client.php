@@ -10,7 +10,8 @@ class Client
     {
         $this->businessService = $businessService;
     }
-    public function setServiceType($serviceType){
+    public function setServiceType($serviceType)
+    {
         $this->serviceType = $serviceType;
     }
 

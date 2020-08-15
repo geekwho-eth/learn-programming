@@ -3,8 +3,8 @@ namespace DesignPattern\AbstractFactory\AbstractFactoryPattern;
 
 class ShapeFactory extends AbstractFactory
 {
-    public function getShape($shapeType){
-
+    public function getShape($shapeType)
+    {
         if (!$shapeType || !in_array($shapeType, ['Square', 'Rectangle'])) {
             return null;
         }
@@ -15,7 +15,8 @@ class ShapeFactory extends AbstractFactory
         return null;
     }
 
-    public function getColor($colorType){
+    public function getColor($colorType)
+    {
         return null;
     }
 }

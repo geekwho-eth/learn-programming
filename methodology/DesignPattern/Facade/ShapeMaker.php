@@ -7,14 +7,14 @@ namespace DesignPattern\Facade;
  */
 class ShapeMaker
 {
-    public $circle = null;
+    public $circle    = null;
     public $rectangle = null;
-    public $square = null;
+    public $square    = null;
     public function __construct()
     {
-        $this->circle = new Circle();
+        $this->circle    = new Circle();
         $this->rectangle = new Rectangle();
-        $this->square = new Square();
+        $this->square    = new Square();
     }
     public function drawCircle()
     {

@@ -12,7 +12,8 @@ class VegBurger extends Burger
         return "Veg Burger";
     }
 
-    public function price(){
+    public function price()
+    {
         return 25;
     }
 }

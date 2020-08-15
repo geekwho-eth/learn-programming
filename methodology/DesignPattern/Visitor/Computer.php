@@ -11,7 +11,8 @@ class Computer implements IComputerPart
         $this->parts[] = new Keyboard();
         $this->parts[] = new Monitor();
     }
-    public function accept($computerPartVisitor){
+    public function accept($computerPartVisitor)
+    {
         foreach ($this->parts as $part) {
             $part->accept($computerPartVisitor);
         }

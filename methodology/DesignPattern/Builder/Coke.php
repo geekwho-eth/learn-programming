@@ -12,7 +12,8 @@ class Coke extends ColdDrink
         return "Coke";
     }
 
-    public function price(){
+    public function price()
+    {
         return 30;
     }
 }

@@ -32,11 +32,11 @@ class FlyWeightDemo
 
     private function getRandomX()
     {
-        return mt_rand(1,100);
+        return mt_rand(1, 100);
     }
 
     private function getRandomY()
     {
-        return mt_rand(1,100);
+        return mt_rand(1, 100);
     }
 }

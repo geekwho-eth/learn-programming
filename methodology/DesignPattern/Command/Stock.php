@@ -7,7 +7,7 @@ namespace DesignPattern\Command;
  */
 class Stock
 {
-    private $name = "ABC";
+    private $name     = "ABC";
     private $quantity = "10";
 
     public function buy()

@@ -12,5 +12,5 @@ abstract class Burger implements Item
         return new Wrapper();
     }
 
-    public abstract function price();
+    abstract public function price();
 }

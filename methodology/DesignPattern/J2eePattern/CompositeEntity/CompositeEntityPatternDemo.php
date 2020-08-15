@@ -4,7 +4,8 @@ namespace DesignPattern\J2eePattern\CompositeEntity;
 
 class CompositeEntityPatternDemo
 {
-    public function run(){
+    public function run()
+    {
         $client = new Client();
         $client->setData("Test", "Data");
         $client->printData();

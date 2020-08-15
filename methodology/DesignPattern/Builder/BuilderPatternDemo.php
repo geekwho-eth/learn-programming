@@ -7,7 +7,7 @@ class BuilderPatternDemo
     public static function run()
     {
         $mealBuild = new MealBuilder();
-        $vegMeal = $mealBuild->prepareVegMeal();
+        $vegMeal   = $mealBuild->prepareVegMeal();
         $vegMeal->showItems();
         echo "Total Cost: " . $vegMeal->getCost();
 

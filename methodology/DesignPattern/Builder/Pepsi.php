@@ -12,7 +12,8 @@ class Pepsi extends ColdDrink
         return "Pepsi";
     }
 
-    public function price(){
+    public function price()
+    {
         return 35;
     }
 }

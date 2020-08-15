@@ -34,11 +34,11 @@ class ThreadSafeSingleton
      */
     public static function getInstanceByLock()
     {
-        $key = 123456;
-        $max = 1;
+        $key         = 123456;
+        $max         = 1;
         $permissions = 0666;
         $autoRelease = 1;
-        $ret = sem_get($key, $max, $permissions, $autoRelease);
+        $ret         = sem_get($key, $max, $permissions, $autoRelease);
 
         if (sem_acquire($ret)) {
             return self::getInstance();

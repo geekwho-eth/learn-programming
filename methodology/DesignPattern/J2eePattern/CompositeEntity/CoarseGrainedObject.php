@@ -12,7 +12,8 @@ class CoarseGrainedObject
         $this->do2 = new DependentObject2();
     }
 
-    public function setData($data1, $data2){
+    public function setData($data1, $data2)
+    {
         $this->do1->setData($data1);
         $this->do2->setData($data2);
     }

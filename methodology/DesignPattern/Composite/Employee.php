@@ -13,8 +13,8 @@ class Employee
     private $list = [];
     public function __construct($name, $dept, $salary)
     {
-        $this->name = $name;
-        $this->dept = $dept;
+        $this->name   = $name;
+        $this->dept   = $dept;
         $this->salary = $salary ;
     }
 
@@ -33,7 +33,8 @@ class Employee
         return $this->list;
     }
 
-    public function __toString(){
+    public function __toString()
+    {
         return "Employee :[ Name : " . $this->name
             . ", dept : " . $this->dept . ", salary :"
             . $this->salary . " ]";

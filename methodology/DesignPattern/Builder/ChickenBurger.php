@@ -12,7 +12,8 @@ class ChickenBurger extends Burger
         return "Chicken Burger";
     }
 
-    public function price(){
+    public function price()
+    {
         return 50;
     }
 }

@@ -9,8 +9,8 @@ class CommandPatternDemo
 {
     public function run()
     {
-        $abcStock = new Stock();
-        $buyStockOrder = new BuyStock($abcStock);
+        $abcStock       = new Stock();
+        $buyStockOrder  = new BuyStock($abcStock);
         $sellStockOrder = new SellStock($abcStock);
 
         $broker = new Broker();

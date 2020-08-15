@@ -10,8 +10,9 @@ class Client
         $this->compositeEntity = new CompositeEntity();
     }
 
-    public function printData(){
-        foreach($this->compositeEntity->getData() as $data){
+    public function printData()
+    {
+        foreach ($this->compositeEntity->getData() as $data) {
             echo $data;
         }
     }

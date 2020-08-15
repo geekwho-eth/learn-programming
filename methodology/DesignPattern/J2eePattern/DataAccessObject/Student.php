@@ -6,9 +6,9 @@ class Student
 {
     private $rollNo;
     private $name;
-    public function __construct($name , $rollNo)
+    public function __construct($name, $rollNo)
     {
-        $this->name = $name;
+        $this->name   = $name;
         $this->rollNo = $rollNo;
     }
     public function getRollNo()

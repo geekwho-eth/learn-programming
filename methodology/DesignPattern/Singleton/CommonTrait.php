@@ -2,7 +2,7 @@
 
 namespace DesignPattern\Singleton;
 
-Trait CommonTrait
+trait CommonTrait
 {
     // 私有静态变量
     private static $instance = null;

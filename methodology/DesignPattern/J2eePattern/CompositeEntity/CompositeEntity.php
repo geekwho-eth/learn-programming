@@ -10,7 +10,8 @@ class CompositeEntity
         $this->cgo = new CoarseGrainedObject();
     }
 
-    public function setData($data1, $data2){
+    public function setData($data1, $data2)
+    {
         $this->cgo->setData($data1, $data2);
     }
 

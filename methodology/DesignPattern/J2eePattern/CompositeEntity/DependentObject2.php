@@ -6,7 +6,8 @@ class DependentObject2
 {
     private $data;
 
-    public function setData($data){
+    public function setData($data)
+    {
         $this->data = $data;
     }
 

@@ -4,7 +4,8 @@ namespace DesignPattern\J2eePattern\BusinessDelegate;
 
 class BusinessLookUp
 {
-    public function getBusinessService($serviceType){
+    public function getBusinessService($serviceType)
+    {
         if ($serviceType == "EJB") {
             return new EJBService();
         } else {
