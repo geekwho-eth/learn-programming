@@ -8,17 +8,17 @@
  * @Last Modified by:   GeekWho
  * @Last Modified time: 2019-01-21 22:55:12
  */
-Class G
+class G
 {
     public function __construct()
     {
         $composer = sprintf(
-            '%s%svendor%sautoload.php' ,
+            '%s%svendor%sautoload.php',
             dirname(__DIR__),
             DIRECTORY_SEPARATOR,
             DIRECTORY_SEPARATOR
         );
-        if(file_exists($composer)){
+        if (file_exists($composer)) {
             include_once $composer;
         }
     }
@@ -35,22 +35,22 @@ Class G
     public function parseUrl()
     {
         $url        = readline("Enter URL: ");
-        if(!$url){
+        if (!$url) {
             echo "参数输入不对" . PHP_EOL;
             exit;
         }
         $parse_url = parse_url($url);
-        if(!$parse_url || !isset($parse_url['path'])){
+        if (!$parse_url || !isset($parse_url['path'])) {
             echo "解析url失败" . PHP_EOL;
             exit;
         }
         $slug = $parse_url['path'];
         // 格式化slug
-        $slug = str_replace('/problems','',$slug);
-        $slug = str_replace('/','',$slug);
+        $slug = str_replace('/problems', '', $slug);
+        $slug = str_replace('/', '', $slug);
         $req  = [
             'operationName' => "questionData",
-            'query' => 'query questionData($titleSlug: String!) {
+            'query'         => 'query questionData($titleSlug: String!) {
   question(titleSlug: $titleSlug) {
     questionId
     questionFrontendId
@@ -109,17 +109,17 @@ Class G
                 'titleSlug' => $slug,
             ]),
         ];
-        $data = $this->request($req , $url);
+        $data = $this->request($req, $url);
         $data = json_decode($data);
-        if(!$data){
+        if (!$data) {
             echo "请求接口失败" . PHP_EOL;
             exit;
         }
         $data = [
-            'number' => $data->data->question->questionId,
+            'number'  => $data->data->question->questionId,
             'problem' => $slug,
-            'title' => $data->data->question->translatedTitle,
-            'link' => $url,
+            'title'   => $data->data->question->translatedTitle,
+            'link'    => $url,
         ];
         return $data;
     }
@@ -148,7 +148,7 @@ Class G
         $return = curl_exec($ch);
         preg_match_all('/^Set-Cookie:\s*([^;]*)/mi', $return, $matches);
         $cookies = array();
-        foreach($matches[1] as $item) {
+        foreach ($matches[1] as $item) {
             parse_str($item, $cookie);
             $cookies = array_merge($cookies, $cookie);
         }
@@ -196,26 +196,26 @@ Class G
      */
     public function generateByInput($args = false)
     {
-        if(!$args){
+        if (!$args) {
             $number      = readline("Enter Number: ");
             $problem     = readline("Enter Problem: ");
             $title       = readline("Enter Title: ");
             $link        = readline("Enter Link: ");
-            if(!$number || !$problem){
+            if (!$number || !$problem) {
                 echo "参数输入不对" . PHP_EOL;
                 exit;
             }
         }
-        if($args){
+        if ($args) {
             list($number, $problem, $title, $link) = $args;
         }
         $root        = __DIR__;
-        $title   = !$title?$problem:$title;
-        $dirname = $number . '.' . $problem;
+        $title       = !$title?$problem:$title;
+        $dirname     = $number . '.' . $problem;
         //检查目录是否存在
         $target = dirname($root) . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . $dirname;
-        if(!file_exists($target)){
-            mkdir($target,0755,true);
+        if (!file_exists($target)) {
+            mkdir($target, 0755, true);
         }
         $name   = $number . '. ' . $title;
         $readme = $root . '/g/README.md';
@@ -229,10 +229,10 @@ Class G
         $readme = $root . '/g/class.php.md';
         $data   = file_get_contents($readme);
         $data   = str_replace('%problem%', $name, $data);
-        $array  = explode('-',$problem);
+        $array  = explode('-', $problem);
         $class  ="";
         foreach ($array as $key => $value) {
-            if($key == 0){
+            if ($key == 0) {
                 $class .= $value;
                 continue;
             }
@@ -246,10 +246,10 @@ Class G
         $readme = $root . '/g/classTest.php.md';
         $data   = file_get_contents($readme);
         $data   = str_replace('%problem%', $name, $data);
-        $array  = explode('-',$problem);
+        $array  = explode('-', $problem);
         $class  ="";
         foreach ($array as $key => $value) {
-            if($key == 0){
+            if ($key == 0) {
                 $class .= $value;
                 continue;
             }

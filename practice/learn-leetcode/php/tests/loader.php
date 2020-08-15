@@ -22,14 +22,14 @@ try {
                 continue;
             }
             $dir = $target . DIRECTORY_SEPARATOR . $file;
-            if(is_dir($dir)){
+            if (is_dir($dir)) {
                 $dirs[] = $dir;
             }
         }
-        spl_autoload_register(function($class) use ($dirs) {
+        spl_autoload_register(function ($class) use ($dirs) {
             foreach ($dirs as $dir) {
                 $file = $dir . DIRECTORY_SEPARATOR . $class. '.php';
-                if(file_exists($file)){
+                if (file_exists($file)) {
                     include "$file";
                 }
             }
@@ -38,4 +38,3 @@ try {
 } catch (\Exception $e) {
     echo $e->getMessage();
 }
-

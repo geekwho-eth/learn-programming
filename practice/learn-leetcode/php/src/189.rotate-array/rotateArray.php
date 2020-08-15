@@ -8,16 +8,15 @@
  */
 class rotateArray
 {
-    public function run($input,$k)
+    public function run($input, $k)
     {
-        if(!is_array($input))
-        {
+        if (!is_array($input)) {
             return "请输入数组";
         }
-        if(!$k){
+        if (!$k) {
             return "请输入正确的个数";
         }
-        if($k > count($input)){
+        if ($k > count($input)) {
             return "旋转个数不能大于数组元素个数";
         }
         $data = [];
@@ -32,16 +31,15 @@ class rotateArray
         return $data;
     }
 
-    public function run1($input,$k)
+    public function run1($input, $k)
     {
-        if(!is_array($input))
-        {
+        if (!is_array($input)) {
             return "请输入数组";
         }
-        if(!$k){
+        if (!$k) {
             return "请输入正确的个数";
         }
-        if($k > count($input)){
+        if ($k > count($input)) {
             return "旋转个数不能大于数组元素个数";
         }
         $offset = $length = 0;
@@ -56,16 +54,15 @@ class rotateArray
         return $data;
     }
 
-    public function run2($input,$k)
+    public function run2($input, $k)
     {
-        if(!is_array($input))
-        {
+        if (!is_array($input)) {
             return "请输入数组";
         }
-        if(!$k){
+        if (!$k) {
             return "请输入正确的个数";
         }
-        if($k > count($input)){
+        if ($k > count($input)) {
             return "旋转个数不能大于数组元素个数";
         }
         $data  = [];

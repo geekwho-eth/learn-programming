@@ -10,8 +10,7 @@ class plusOne
 {
     public function run($input)
     {
-        if(!is_array($input) || !$input)
-        {
+        if (!is_array($input) || !$input) {
             return "请输入数组";
         }
         //是否有进位
@@ -20,12 +19,12 @@ class plusOne
         for ($i=count($input) - 1; $i >= 0; $i--) {
             $j=$input[$i];
             // 没有进位产生
-            if(!$plus && $j < 9){
+            if (!$plus && $j < 9) {
                 $input[$i] = $j + 1;
                 break;
             }
             // 有进位
-            if($plus && $j < 9){
+            if ($plus && $j < 9) {
                 $input[$i] = $j + 1;
                 $plus      =false;
                 break;
@@ -36,5 +35,4 @@ class plusOne
         }
         return $input;
     }
-
 }

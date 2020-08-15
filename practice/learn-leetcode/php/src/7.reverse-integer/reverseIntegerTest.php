@@ -31,13 +31,13 @@ class reverseIntegerTest extends \PHPUnit\Framework\TestCase
             ],
             'case2' => [
                 'input' => [
-                    'str' => pow(2,32),
+                    'str' => pow(2, 32),
                 ],
                 'output' => 0,
             ],
             'case2.1' => [
                 'input' => [
-                    'str' => -pow(2,32),
+                    'str' => -pow(2, 32),
                 ],
                 'output' => 0,
             ],
@@ -55,7 +55,6 @@ class reverseIntegerTest extends \PHPUnit\Framework\TestCase
                     var_export($output, true)
                 )
             );
-
         }
     }
 }

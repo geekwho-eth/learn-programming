@@ -16,20 +16,19 @@ class longestCommonPrefix
         $count2 = 0;
         // 找到最短的字符串
         for ($i=0; $i < $count1 - 1; $i++) {
-            $count2 = min(mb_strlen($input[$i]),mb_strlen($input[$i + 1]));
+            $count2 = min(mb_strlen($input[$i]), mb_strlen($input[$i + 1]));
         }
 
         // 从最短的字符串开始
         for ($i=0; $i < $count2; $i++) {
             for ($j=0; $j < $count1; $j++) {
-               $k = mb_substr($input[$j], $i, 1);
-               $str[$i.$k]++;
-               if($str[$i.$k] == 3){
+                $k = mb_substr($input[$j], $i, 1);
+                $str[$i.$k]++;
+                if ($str[$i.$k] == 3) {
                     $long .= $k;
-               }
+                }
             }
         }
         return $long;
     }
-
 }

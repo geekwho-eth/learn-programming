@@ -15,14 +15,14 @@ class validPalindrome
      */
     public function run($input)
     {
-        $count = preg_match_all('/[a-z0-9]+/i',$input,$matches);
-        if(!$count || !isset($matches[0])){
+        $count = preg_match_all('/[a-z0-9]+/i', $input, $matches);
+        if (!$count || !isset($matches[0])) {
             return "请输入字母或者数字";
         }
-        $str   = strtolower(implode("",$matches[0]));
+        $str   = strtolower(implode("", $matches[0]));
         $count = mb_strlen($str);
         $debug = false;
-        if($debug){
+        if ($debug) {
             echo PHP_EOL . $str . PHP_EOL;
         }
         //奇数和偶数的回文字符串的不同
@@ -31,13 +31,14 @@ class validPalindrome
             $str1= mb_substr($str, $i, 1);
             $j   = $i == 0 ?$count - 1:$j;
             $str2= mb_substr($str, $j, 1);
-            if($debug){
-                echo sprintf("str1 str2 i j %s %s %s %s". PHP_EOL , $str1 , $str2 , $i ,$j);
+            if ($debug) {
+                echo sprintf("str1 str2 i j %s %s %s %s". PHP_EOL, $str1, $str2, $i, $j);
             }
-            if($str1 != $str2) return false;
+            if ($str1 != $str2) {
+                return false;
+            }
             $j--;
         }
         return true;
     }
-
 }

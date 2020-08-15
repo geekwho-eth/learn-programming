@@ -12,8 +12,7 @@ class reverseInteger
     public function run($input)
     {
         //检查输入范围
-        if($input < (-pow(2,31)) || $input > (pow(2,31) - 1))
-        {
+        if ($input < (-pow(2, 31)) || $input > (pow(2, 31) - 1)) {
             return 0;
         }
         $int = 0 ;
@@ -26,15 +25,13 @@ class reverseInteger
          * 3. int = 32 * 10 + 1 %10 = 321
          * input = 0
          */
-        while($input != 0){
+        while ($input != 0) {
             $int   = $int * 10 + $input % 10;
             $input = intval($input / 10);
         }
-        if($int < (-pow(2,31)) || $int > (pow(2,31) - 1))
-        {
+        if ($int < (-pow(2, 31)) || $int > (pow(2, 31) - 1)) {
             $int = 0;
         }
         return $int;
     }
-
 }

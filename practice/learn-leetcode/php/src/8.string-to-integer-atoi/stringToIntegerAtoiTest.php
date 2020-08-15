@@ -61,7 +61,6 @@ class stringToIntegerAtoiTest extends \PHPUnit\Framework\TestCase
                     var_export($output, true)
                 )
             );
-
         }
     }
 }

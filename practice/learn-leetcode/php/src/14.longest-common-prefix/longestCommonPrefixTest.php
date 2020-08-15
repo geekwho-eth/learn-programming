@@ -37,7 +37,6 @@ class longestCommonPrefixTest extends \PHPUnit\Framework\TestCase
                     var_export($output, true)
                 )
             );
-
         }
     }
 }

@@ -75,8 +75,9 @@ class rotateImage
                 $r2 = $r3;
                 $r3 = $r4;
                 $r4 = $tmp;
-                if($debug){
-                    echo sprintf("i j r1 r2 r3 r4 %s %s %s %s %s %s" . PHP_EOL,
+                if ($debug) {
+                    echo sprintf(
+                        "i j r1 r2 r3 r4 %s %s %s %s %s %s" . PHP_EOL,
                         $i,
                         $j,
                         $i . ',' . $j . '->r1:'. $r1,
@@ -89,5 +90,4 @@ class rotateImage
         }
         return $input;
     }
-
 }

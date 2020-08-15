@@ -29,7 +29,7 @@ class rotateArrayTest extends \PHPUnit\Framework\TestCase
         foreach ($tests as $key => $case) {
             $input  = $case['input'];
             $output = $case['output'];
-            $return = (new rotateArray())->run($input['nums'],$input['k']);
+            $return = (new rotateArray())->run($input['nums'], $input['k']);
             $this->assertEquals(
                 true,
                 $return == $output,
@@ -40,7 +40,7 @@ class rotateArrayTest extends \PHPUnit\Framework\TestCase
                 )
             );
 
-            $return = (new rotateArray())->run1($input['nums'],$input['k']);
+            $return = (new rotateArray())->run1($input['nums'], $input['k']);
             $this->assertEquals(
                 true,
                 $return == $output,
@@ -51,7 +51,7 @@ class rotateArrayTest extends \PHPUnit\Framework\TestCase
                 )
             );
 
-            $return = (new rotateArray())->run2($input['nums'],$input['k']);
+            $return = (new rotateArray())->run2($input['nums'], $input['k']);
             $this->assertEquals(
                 true,
                 $return == $output,

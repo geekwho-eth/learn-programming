@@ -12,11 +12,10 @@ class intersectionOfTwoArraysII
     {
         $data = [];
         foreach ($input1 as $key => $value) {
-            if(in_array($value, $input2)){
+            if (in_array($value, $input2)) {
                 $data[] = $value;
             }
         }
         return $data;
     }
-
 }

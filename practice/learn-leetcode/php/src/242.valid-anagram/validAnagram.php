@@ -10,7 +10,7 @@ class validAnagram
 {
     public function run($input1, $input2)
     {
-        if(!is_string($input1) || !is_string($input2)){
+        if (!is_string($input1) || !is_string($input2)) {
             return "请输入字符串";
         }
 
@@ -27,10 +27,11 @@ class validAnagram
         }
 
         foreach ($str as $v) {
-            if($v != 0 ) return false;
+            if ($v != 0) {
+                return false;
+            }
         }
 
         return true;
     }
-
 }

@@ -11,13 +11,12 @@ class bestTimeToBuyAndSellStockII
     public function run($input)
     {
         $profit = 0;
-        if(!is_array($input))
-        {
+        if (!is_array($input)) {
             return $profit;
         }
 
         for ($i=0; $i < count($input); $i++) {
-            if($input[$i + 1] > $input[$i]){
+            if ($input[$i + 1] > $input[$i]) {
                 $profit += $input[$i + 1] - $input[$i];
             }
         }

@@ -10,17 +10,18 @@ class implementStrstr
 {
     public function run($input, $needle)
     {
-        if($needle === '') return 0;
+        if ($needle === '') {
+            return 0;
+        }
         $count1 = mb_strlen($input);
         $count2 = mb_strlen($needle);
         $flag   = false;
         for ($i = 0; $i < $count1; $i++) {
             $str = mb_substr($input, $i, $count2);
-            if($str === $needle){
+            if ($str === $needle) {
                 return $i;
             }
         }
         return -1;
     }
-
 }

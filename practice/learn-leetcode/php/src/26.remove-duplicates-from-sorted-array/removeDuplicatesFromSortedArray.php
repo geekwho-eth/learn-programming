@@ -14,23 +14,22 @@ class removeDuplicatesFromSortedArray
     public function run($input)
     {
         $debug = false;
-        if(!is_array($input))
-        {
+        if (!is_array($input)) {
             return "请输入数组";
         }
         $data = (new ArrayObject($input))->getArrayCopy();
 
         for ($i=0,$j=1; $j < count($input); $j++) {
-            if ($input[$i] != $input[$j]){
+            if ($input[$i] != $input[$j]) {
                 $i++;
                 continue;
             }
-            if ($input[$i] == $input[$j]){
+            if ($input[$i] == $input[$j]) {
                 unset($data[$i]);
                 $i++;
             }
-            if($debug){
-                echo sprintf("i %s j %s vi %s vj %s" . PHP_EOL,$i,$j,$input[$i],$input[$j]);
+            if ($debug) {
+                echo sprintf("i %s j %s vi %s vj %s" . PHP_EOL, $i, $j, $input[$i], $input[$j]);
             }
         }
         return count($data);

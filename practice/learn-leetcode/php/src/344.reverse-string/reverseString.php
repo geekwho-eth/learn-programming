@@ -10,7 +10,7 @@ class reverseString
 {
     public function run($input)
     {
-        if(!is_string($input)){
+        if (!is_string($input)) {
             return "请输入字符串";
         }
 
@@ -30,7 +30,7 @@ class reverseString
      */
     public function run1($input)
     {
-        if(!is_string($input)){
+        if (!is_string($input)) {
             return "请输入字符串";
         }
 
@@ -45,13 +45,14 @@ class reverseString
 
     public function run2($input)
     {
-        if(!is_string($input)){
+        if (!is_string($input)) {
             return "请输入字符串";
         }
 
         $count = mb_strlen($input);
         $str   = "";
-        $stack = new \Ds\Stack();;
+        $stack = new \Ds\Stack();
+        ;
         for ($i = 0; $i < $count; $i++) {
             $stack->push(mb_substr($input, $i, 1));
         }
@@ -61,5 +62,4 @@ class reverseString
 
         return $str;
     }
-
 }
