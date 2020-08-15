@@ -5,7 +5,7 @@
 # 2018.09.17 geekwho first release.
 
 ### 自动修正 php 编码格式 ###
-bin=/usr/local/bin/php-cs-fixer2
+bin=/usr/local/bin/php-cs-fixer
 
 # install php-cs-fixer
 if [ ! -f $bin ]; then
@@ -19,7 +19,7 @@ root=$(cd "$(dirname "$0")"; cd ..; pwd)
 
 function fixer()
 {
-  ERRORS=$($bin fix --config=$root/.php_cs $root/$1 2>&1 | grep ")")
+  ERRORS=$($bin fix --config=$root/bin/.php_cs $root/$1 2>&1 | grep ")")
 }
 
 #单个文件的格式化
@@ -46,6 +46,9 @@ php_dirs=(
   src/
   bin/
   ../linux/
+  ../../methodology/DesignPattern
+  ../php
+  ../learn-leetcode/php
 )
 
 cd $root
